@@ -40,14 +40,17 @@ class App extends Component {
     this.setState({ data: newdata });
     console.log(id, this.state.data.data, filteredPeople);
   };
-  handleEdit = (id) => {
-    console.log(id);
+  handleEdit = (id, data) => {
+    const newData = this.state.data;
+    const objIndex = this.state.data.data.findIndex((obj) => obj.id == id);
+    newData.data[objIndex].first_name = data.fname;
+    newData.data[objIndex].last_name = data.lname;
+    newData.data[objIndex].email = data.email;
+    this.setState({ data: newData });
+    this.props.getData(newData.data);
   };
 
   render() {
-    {
-      // console.log(this.state.data, this.props.data, this.props.page);
-    }
     return (
       <div>
         {this.state.data.data && this.state.data.data.length > 0 ? (

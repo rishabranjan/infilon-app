@@ -22,10 +22,10 @@ export default function BasicTable(props) {
           <TableHead>
             <TableRow>
               <TableCell>Avatar</TableCell>
-              <TableCell align="center">Email</TableCell>
+              <TableCell align="center">ID&nbsp;</TableCell>
               <TableCell align="center">First Name&nbsp;</TableCell>
               <TableCell align="center">Last Name&nbsp;</TableCell>
-              <TableCell align="center">ID&nbsp;</TableCell>
+              <TableCell align="center">Email</TableCell>
               <TableCell align="center">&nbsp;</TableCell>
               <TableCell align="center">&nbsp;</TableCell>
             </TableRow>
@@ -39,10 +39,10 @@ export default function BasicTable(props) {
                 <TableCell component="th" scope="row">
                   <Avatar alt="Avatar" src={data.avatar} />
                 </TableCell>
-                <TableCell align="center">{data.email}</TableCell>
+                <TableCell align="center">{data.id}</TableCell>
                 <TableCell align="center">{data.first_name}</TableCell>
                 <TableCell align="center">{data.last_name}</TableCell>
-                <TableCell align="center">{data.id}</TableCell>
+                <TableCell align="center">{data.email}</TableCell>
                 <TableCell align="center">
                   {/* <Button
                     onClick={() => props.handleEdit(data.id)}
@@ -50,7 +50,7 @@ export default function BasicTable(props) {
                   >
                     Edit
                   </Button> */}
-                  <FormDialog handleSubmit={props.handleEdit(data.id)} />
+                  <FormDialog handleSubmit={props.handleEdit} data={data} />
                 </TableCell>
                 <TableCell align="center">
                   <Button
