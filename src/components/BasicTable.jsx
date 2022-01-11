@@ -11,6 +11,7 @@ import Button from "@mui/material/Button";
 import { Pagination } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { pageChange } from "../actions";
+import FormDialog from "./EditTable";
 
 export default function BasicTable(props) {
   const dispatch = useDispatch();
@@ -43,12 +44,13 @@ export default function BasicTable(props) {
                 <TableCell align="center">{data.last_name}</TableCell>
                 <TableCell align="center">{data.id}</TableCell>
                 <TableCell align="center">
-                  <Button
+                  {/* <Button
                     onClick={() => props.handleEdit(data.id)}
                     variant="outlined"
                   >
                     Edit
-                  </Button>
+                  </Button> */}
+                  <FormDialog handleSubmit={props.handleEdit(data.id)} />
                 </TableCell>
                 <TableCell align="center">
                   <Button
