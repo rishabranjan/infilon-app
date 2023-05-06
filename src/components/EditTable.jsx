@@ -84,7 +84,7 @@ export default function FormDialog(props) {
               handleClose();
             }}
           >
-            Subscribe
+            Confirm
           </Button>
         </DialogActions>
       </Dialog>

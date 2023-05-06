@@ -9,12 +9,9 @@ import Paper from "@mui/material/Paper";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import { Pagination } from "@mui/material";
-import { useSelector, useDispatch } from "react-redux";
-import { pageChange } from "../actions";
 import FormDialog from "./EditTable";
 
 export default function BasicTable(props) {
-  const dispatch = useDispatch();
   return (
     <div>
       <TableContainer component={Paper}>

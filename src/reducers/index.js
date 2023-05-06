@@ -1,5 +1,4 @@
 import { combineReducers } from "redux";
-import { getData } from "../actions";
 import PageChangeReducer from "./PageChangeReducer";
 import GetData from "./GetData";
 

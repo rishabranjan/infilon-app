@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import "./App.css";
 import BasicTable from "./components/BasicTable";
-import { useSelector, connect } from "react-redux";
+import { connect } from "react-redux";
 import { pageChange, getData } from "./actions";
 
 class App extends Component {
@@ -40,6 +40,7 @@ class App extends Component {
     this.setState({ data: newdata });
     console.log(id, this.state.data.data, filteredPeople);
   };
+
   handleEdit = (id, data) => {
     const newData = this.state.data;
     const objIndex = this.state.data.data.findIndex((obj) => obj.id == id);
